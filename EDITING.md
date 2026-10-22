@@ -7,6 +7,16 @@ where they will watch it. It isn't a house style: a two-hour talk, a podcast, a 
 For a small, specific request (fix a title, cut this sentence, swap this shot), make that change
 well and leave the rest alone. Use this guide for *how*; don't re-edit what nobody asked about.
 
+### Work with what's set up
+
+Use only the tools and services that are already working where you are: the editor, what's
+installed on this computer, and accounts or API keys that are already set up. Never sign up for
+anything, ask for or paste a key, install something paid, or send the person's footage to an
+outside service just to follow this guide. When a step would need a service that isn't set up
+(stock footage, generated images or video, cloud transcription), skip it, do the best edit with
+what's there, and at the end say what you skipped and what setting it up would add. A missing
+service is never a reason to stop, and never a reason to lower the bar on the rest.
+
 ### 1. Read the video first
 
 Read the whole transcript (and the brief, notes and markers) before changing anything, then
@@ -89,9 +99,13 @@ the point (an emotional beat, a joke, a promise to camera), leave them on screen
 - **Where it comes from, in order:**
   1. the video's own footage: other camera angles, screen recordings, earlier recordings, files
      the person handed over;
-  2. real footage from a library with a clear license;
+  2. real footage from a library with a clear license, if one is already set up;
   3. a diagram or graphic built from what was actually said;
-  4. generated footage, only for what can't be filmed (an idea, a metaphor, the past).
+  4. generated footage, only for what can't be filmed (an idea, a metaphor, the past), and only
+     if a generator is already set up.
+
+  With only the first and third, that's a complete edit. Where B-roll would help and nothing
+  set up can supply it, leave the person on screen and list the moment with what to find.
 - **Real beats generated.** Generated pictures are never shown as evidence that something
   happened, never stand in for real people, products or places as if real, and never carry
   numbers or results nobody said.

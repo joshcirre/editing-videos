@@ -13,7 +13,10 @@ Premiere, Resolve, CapCut, ffmpeg, Remotion, HyperFrames or JCSS.
 
 1. Read [EDITING.md](EDITING.md) in full. It is the guide; this file only says how to apply it.
 2. Read the whole transcript, the brief and any notes. If there's no transcript, make one with
-   word timings first (Whisper, or the editor's own).
+   word timings first, with what's already here (the editor's own, or a local Whisper). Use an
+   online transcription service only if it's already set up; if nothing can transcribe, say so
+   and ask for a transcript.
+   Throughout, use only services already set up (EDITING.md, "Work with what's set up").
 3. Write your read of the video (EDITING.md §1) and ask the person what you need to know. When
    you can't ask, go with your best read and say what you assumed.
 4. Edit in this order: retakes and mistakes, then cuts between phrases, then the shape (the
