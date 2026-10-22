@@ -41,5 +41,15 @@ CLI, and it follows this guide itself:
   against the export's target.
 - Every change is a version you keep or undo.
 
-With JCSS installed, add its MCP server (`claude mcp add --scope user jcss -- <path-to-jcss>
-mcp`) and call `jcss_guide` to see what it can do.
+It edits videos you didn't record in it, too. With JCSS installed (its `jcss` CLI is inside the
+app: `/Applications/JCSS.app/Contents/Helpers/jcss` on a Mac):
+
+```sh
+jcss edit from-video ~/Movies/talk.mov -p ~/Movies/Talk   # makes a show there if there isn't one
+```
+
+That opens the video as an edit and, with JCSS open, transcribes it on your computer. Then edit
+it with this guide through `jcss edit …` or the MCP server (`claude mcp add --scope user jcss --
+<path-to-jcss> mcp`, tool `jcss_edit_from_video`), and open the show in JCSS to watch the edit,
+keep or undo each change and export it (MP4, or a Final Cut, Premiere or Resolve timeline).
+`jcss_guide` (or `jcss guide`) says everything else it can do.
