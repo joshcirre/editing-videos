@@ -28,7 +28,8 @@ B-roll would help."
 ## Credits
 
 Ideas (not text) from Nate Herk's [herk-edit-kit](https://github.com/nateherkai/herk-edit-kit)
-and [agent-video-editor](https://github.com/kmilo93sd/agent-video-editor), both MIT.
+[agent-video-editor](https://github.com/kmilo93sd/agent-video-editor) and
+[bckgrnd-msc-mcp](https://github.com/chrislanejones/bckgrnd-msc-mcp)'s music skill, all MIT.
 
 ## License
 

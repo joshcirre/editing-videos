@@ -13,7 +13,7 @@ Use only the tools and services that are already working where you are: the edit
 installed on this computer, and accounts or API keys that are already set up. Never sign up for
 anything, ask for or paste a key, install something paid, or send the person's footage to an
 outside service just to follow this guide. When a step would need a service that isn't set up
-(stock footage, generated images or video, cloud transcription), skip it, do the best edit with
+(stock footage or music, generated images, video or music, cloud transcription), skip it, do the best edit with
 what's there, and at the end say what you skipped and what setting it up would add. A missing
 service is never a reason to stop, and never a reason to lower the bar on the rest.
 
@@ -131,13 +131,54 @@ the point (an emotional beat, a joke, a promise to camera), leave them on screen
 
 ### 7. Sound
 
-- **The voice wins.** Music sits 18 dB or more under speech, ducks while people talk and comes up
-  between lines and where nobody talks. Land musical hits on cuts and endings.
+- **The voice wins.** Music ducks while people talk and comes up between lines and where nobody
+  talks. Land musical hits on cuts and endings, and end the music with the video, not mid-phrase.
 - **No dead silence** in the middle: room tone under gaps.
 - **Even levels** between people, scenes and clips. Master once, for where it's going: −14 LUFS
   and −1 dBTP for video platforms, −16 LUFS for podcast feeds. Measure the exported file.
 - **Sound effects** follow something you can see, sparingly. Not on every cut.
 - **Short fades** (10–30 ms) at hard audio cuts, so joins don't click.
+
+#### Music
+
+Music is a choice, not a default. Decide whether the video wants any, then what, then how loud.
+
+- **Whether**: music helps an opening, a montage, a demo, a recap, the space between sections.
+  It gets in the way of a dense explanation, a conversation that carries itself, and anything
+  sad, serious or sensitive (loss, hard news, a prayer, an apology): leave those without music,
+  or ask first. A talk with music only in the intro and outro is often the right answer.
+- **What**: match its energy to the content. Calm and steady for long or explanatory videos,
+  stories and interviews; more drive for news, demos and recaps; the most for trailers and hype.
+  The longer the video, the calmer the music, whatever the topic: past about ten minutes, keep a
+  bed low-energy or keep it to the edges. A named track or mood from the person wins.
+- **No melody under words.** A lead line or vocals compete with speech. Under dense talking, use
+  music that's mostly pads, chords and bass, or the version without its lead; save the melody
+  for where nobody talks.
+- **How loud**: set it by what's happening, as loudness under the voice (both measured, not
+  guessed from a meter):
+
+  | The moment | Music under the voice |
+  |---|---|
+  | Dense, technical or fast talking | 18–22 dB |
+  | Ordinary talking or narration | about 14 dB |
+  | Light content where the music is part of the feel | 10–12 dB |
+  | An intro, outro or title with little talking | 6–8 dB |
+  | Nobody talking (a montage, a transition) | the music leads, about as loud as the voice is elsewhere |
+
+- **Where it comes from**, as with B-roll: music the person handed over or the show already
+  uses; then a music library or generator that's already set up; otherwise none, and say where
+  it would help. Every track needs a clear license for where the video is going (a monetized
+  channel, a podcast feed, a church stream).
+- **Adjust by ear.** The person's ear outranks every number here. Turn each note into one change:
+
+  | They say | Change |
+  |---|---|
+  | "Can't hear the words" / "the music's too loud" | music 4 dB lower |
+  | "Can't hear the music" | music 4 dB higher |
+  | "The melody's distracting" | a version without the lead, or a track with less melody |
+  | "Too busy" | a calmer track, or fewer drums |
+  | "Too sleepy" / "too flat" | one step more energy |
+  | "Too much music" | keep it to the intro, outro and gaps |
 
 ### 8. Check before you hand it over
 
