@@ -74,8 +74,19 @@ and don't tighten a reflective moment to a feed's pace.
   follows an action.
 - **Cut between phrases** (what's said in one breath), in silence, never inside a word. Leave a
   breath before the next word: about 0.1–0.2 s, a little more after the end of a sentence.
-- **Retakes**: keep the last clean take of a line. Join two takes only where both sides are
-  silent; if they run together, keep one whole take. Saying something twice on purpose (a
+- **Transcript times are estimates, not cut points.** A word's last sound (a final "t" or "s")
+  often runs past its transcribed end, and a quiet first consonant starts before its transcribed
+  start. Place each cut by the sound (the waveform or levels), and check every join on both
+  sides: the last word out is whole, the first word in is whole, and the pause between reads as
+  one thought.
+- **The first word in starts the clip.** Where one take joins another, the incoming side begins
+  on the first sound that's meant: drop the breath before a restart, the mouth reset and any
+  scrap of the take before. A few idle frames after a visible cut already feel like a stumble.
+  Breaths inside a sentence that carries on stay.
+- **Retakes**: keep the best take of each thought, not automatically the last: the one that's
+  whole, clear and meant. Usually that's the last, but not when it adds a slip, drops a point or
+  is cut short. Keep each thought once and any words only an earlier take has. Join two takes
+  only where both sides are silent; if they run together, keep one whole take. Saying something twice on purpose (a
   refrain, a list, emphasis) isn't a mistake. Detectors miss retakes said in other words, so
   read the transcript yourself; finding nothing to cut is a fine answer.
 - **Fillers** go only where there's silence on both sides and the line reads naturally without
@@ -95,7 +106,10 @@ B-roll shows what's being said. It isn't decoration, and there's no quota: when 
 the point (an emotional beat, a joke, a promise to camera), leave them on screen.
 
 - **Anchor it to the word that names it.** It comes in at most 0.5 s before that word and stays
-  until the idea is finished, long enough to take in (about 1.5 s or more).
+  until the idea is finished, long enough to take in (about 1.5 s or more). Where the edit
+  already has a cut near there, or a sentence starts, start or end it on that instead of adding
+  a new change; don't switch shots near the end of a sentence, and hold one shot across cuts
+  inside the same idea.
 - **Where it comes from, in order:**
   1. the video's own footage: other camera angles, screen recordings, earlier recordings, files
      the person handed over;
@@ -109,8 +123,12 @@ the point (an emotional beat, a joke, a promise to camera), leave them on screen
 - **Real beats generated.** Generated pictures are never shown as evidence that something
   happened, never stand in for real people, products or places as if real, and never carry
   numbers or results nobody said.
-- **Moving beats still.** A photo needs gentle motion (a slow push) and stays short; prefer
-  footage that moves on its own.
+- **Moving beats still.** A photo needs gentle motion (a slow push, about 2–3% over the shot, about a
+  fixed center, with no stepping) and stays short; prefer footage that moves on its own. Charts,
+  calendars and timelines people need to read stay still.
+- **Show the real thing.** The chart, post, article or page that's talked about, as it is: never
+  redrawn, recreated or swapped for a look-alike, even another from the same source. Crop to the
+  part that matters (headline, source, the passage) rather than shrinking the whole page.
 - **Use each clip once.** Another crop or speed of the same shot isn't a new shot.
 - **Screens**: crop to the action and make it readable at the size people watch. Never show a
   whole page shrunk down.
@@ -136,7 +154,8 @@ the point (an emotional beat, a joke, a promise to camera), leave them on screen
 - **No dead silence** in the middle: room tone under gaps.
 - **Even levels** between people, scenes and clips. Master once, for where it's going: −14 LUFS
   and −1 dBTP for video platforms, −16 LUFS for podcast feeds. Measure the exported file.
-- **Sound effects** follow something you can see, sparingly. Not on every cut.
+- **Sound effects** follow something you can see, sparingly. Not on every cut. Line up where the
+  sound is first heard (most files start with a little silence), not the start of the file.
 - **Short fades** (10–30 ms) at hard audio cuts, so joins don't click.
 
 #### Music
@@ -184,6 +203,8 @@ Music is a choice, not a default. Decide whether the video wants any, then what,
 
 - Look at the frames on both sides of every cut, and the first seconds frame by frame.
 - Listen across every join and to the last word. If you can't hear, say so: a person should.
+  A tool that said it worked, a render that finished or a clean level scan doesn't prove a
+  join sounds right.
 - Check captions against the words and B-roll against what's being said at that moment.
 - Measure the loudness of what you'll deliver.
 - Reread your read: does the edit make the point, for those viewers, there?
@@ -194,7 +215,8 @@ Music is a choice, not a default. Decide whether the video wants any, then what,
 
 When someone corrects an edit, fix it, then ask whether the note is a rule for next time. If it
 is, write it down with the note it came from, when it applies and how to check it. A show's or
-channel's own editing notes win over this guide.
+channel's own editing notes win over this guide. When the editor you're in keeps the person's own
+keeps and cuts as learned habits, read them first and follow them over this guide's defaults.
 
 When someone wants their videos to feel like other videos (their own past edits, or a channel
 they admire), study 3–6 of them before editing. Measure how they're cut: shot length, pauses
