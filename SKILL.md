@@ -76,8 +76,10 @@ Edit with it when the person asks for JCSS, starting from nothing but the video:
 5. Check your work: `jcss edit still` either side of a cut, `jcss edit loudness` against the
    export's target.
 6. Hand it over: `jcss edit export <id>` renders the MP4 (it needs ffmpeg), or a Final Cut,
-   Premiere or Resolve timeline. The person can open the show in JCSS to watch the edit and
-   keep or undo each change.
+   Premiere or Resolve timeline. To let the person watch the edit and keep or undo each
+   change, `jcss edit open <id> -p <show>` opens JCSS on the edit alone (a Mac for now).
+   Open it that way, not by opening the app or the show: that starts the show's cameras,
+   screens and outputs.
 
 `jcss edit job <files or links…> --brief "…" -p <show>` runs steps 2 to 6 unattended and ends
 with a review link people comment on; it needs the person signed in to JCSS web, so use it

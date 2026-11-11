@@ -38,6 +38,9 @@ titles (EDITING.md, "Work with what's set up").
   everything fades and slides up: pick the entrance from the thing (a bar grows from its base, a
   line draws along its path, a card comes from the edge it sits against).
 - **Nothing starts from nothing**: scale from about 0.95 with opacity, not from 0.
+- **One piece of text per beat.** A big number or a headline stands alone: no small label above
+  it, no caption line under it. That stack is a web page's hero section, and on video it reads
+  as generated. If the label matters, it's the next beat or it's said aloud.
 - **Reading time** is the guide's (EDITING.md §6): about 1 s plus 0.3 s a word, at least 2 s,
   counted from when the text has landed.
 - **Size and place**: text no smaller than 2.6% of the frame's shorter side (28 px at 1080p);
@@ -151,3 +154,7 @@ load: fix those before trusting the frames. Without a graphics card a 1080p fram
   values in the element's own style.
 - **A graphic that only works in the browser.** If it needs a click, a hover or a scroll to
   start, it never starts here: begin everything from the page loading.
+- **Purple blacks after an ffmpeg `blend`** (a glow or light leak laid over the video with a
+  mode such as `screen`). `blend` works on each plane, and in YUV the colour planes rest at the
+  middle, not at zero. Convert both inputs to RGB first:
+  `[0]format=gbrp[a];[1]format=gbrp[b];[a][b]blend=all_mode=screen`.

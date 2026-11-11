@@ -39,6 +39,16 @@ them specific, and give your best guess with each. When you can't ask (you get o
 edit from your best read and say what you assumed. The person's words and the brief always win
 over your read.
 
+Two answers are settled before the first cut, by the brief, by asking, or as a guess you state:
+about how long it will be, and whether it's wide or vertical. A first version at the wrong
+length is made again from nothing.
+
+Look at the files too. Know who and what is in each clip before you use it: a folder that was
+handed over isn't all the same person or the same event. Compare where each file's picture and
+sound start (`ffprobe -v error -show_entries stream=codec_type,start_time -of csv=p=0 clip.mp4`
+prints both); a picture that starts seconds after its sound turns up in the edit as a frozen or
+late shot.
+
 ### 2. Set the pace from the content
 
 Pace follows attention, not a clock: move on when the viewer has what the moment gives them.
@@ -61,6 +71,9 @@ and don't tighten a reflective moment to a feed's pace.
   short, the first 30 s of a long video.
 - **A cold open** comes only from the video's own strongest moment, and stays true to what was
   meant in context.
+- **A short spends its best material first.** Viewers leave before a slow build pays off, so
+  the strongest moment opens it, anything before the first point lasts a few seconds, and what's
+  weak is cut, not saved for later.
 - **One main thread.** If the opening raises a question, answer it. Pay off before any call to
   action; "comment to find out" is never the only answer.
 - **Shorter isn't the goal; clearer is.** Cut tangents, repeats and failed takes. Keep what
@@ -141,9 +154,14 @@ the point (an emotional beat, a joke, a promise to camera), leave them on screen
   2); subtitles are at most 42 characters a line, two lines, and at least 0.7 s on screen.
 - **Never cover** a mouth, a face that's talking, or what the viewer needs to read on a screen.
   Make them readable over anything: a box or a strong shadow, checked against what's behind.
-- **Titles** stay long enough to read twice (about 1 s plus 0.3 s a word, at least 2 s). A
-  person's name goes up when they first matter, not in the first second. One title at a time,
-  one style throughout.
+  Over footage that is the point (a montage, a demo), text goes to a side or a corner so the
+  picture still shows, and the shots can keep changing under it while it holds.
+- **Titles** stay long enough to read twice (about 1 s plus 0.3 s a word, at least 2 s; a
+  number that is the point, about 3 s). A person's name goes up when they first matter, not in
+  the first second. One title at a time, one style throughout.
+- **Every name, number and count on screen has a source**: what was said, or a file you can
+  point to. A figure you worked out yourself (videos counted in a folder, a list added up) is a
+  guess until the person confirms it: say how you got it and ask.
 - **A graphic is never empty** and shows what the words don't: the evidence, the relationship,
   the example. It doesn't just repeat the caption.
 
@@ -155,8 +173,13 @@ the point (an emotional beat, a joke, a promise to camera), leave them on screen
 - **Even levels** between people, scenes and clips. Master once, for where it's going: −14 LUFS
   and −1 dBTP for video platforms, −16 LUFS for podcast feeds. Measure the exported file.
 - **Sound effects** follow something you can see, sparingly. Not on every cut. Line up where the
-  sound is first heard (most files start with a little silence), not the start of the file.
+  sound is first heard (most files start with a little silence), not the start of the file. Set
+  the level with the music and voice playing, not alone: an effect that's clear in silence
+  disappears under a loud bar.
 - **Short fades** (10–30 ms) at hard audio cuts, so joins don't click.
+- **A line lifted from another recording brings its room with it.** Fade its background in just
+  before the first word and out after the last, longer than a click fade, or run room tone
+  under it, so the room doesn't snap on and off.
 
 #### Music
 
@@ -173,6 +196,10 @@ Music is a choice, not a default. Decide whether the video wants any, then what,
 - **No melody under words.** A lead line or vocals compete with speech. Under dense talking, use
   music that's mostly pads, chords and bass, or the version without its lead; save the melody
   for where nobody talks.
+- **When the music drives the cut** (a montage, a reel, a trailer), find its tempo and where
+  its bars start before cutting. Every picture cut lands on a beat and every edit of the music
+  itself on a bar line; an idea gets a whole bar or two; and there's no stretch where neither
+  the picture nor the sound changes. A cut a few frames off the beat reads as a mistake.
 - **How loud**: set it by what's happening, as loudness under the voice (both measured, not
   guessed from a meter):
 
@@ -194,6 +221,7 @@ Music is a choice, not a default. Decide whether the video wants any, then what,
   |---|---|
   | "Can't hear the words" / "the music's too loud" | music 4 dB lower |
   | "Can't hear the music" | music 4 dB higher |
+  | "Can't hear the sound effects" | effects 4 dB higher |
   | "The melody's distracting" | a version without the lead, or a track with less melody |
   | "Too busy" | a calmer track, or fewer drums |
   | "Too sleepy" / "too flat" | one step more energy |
@@ -205,6 +233,11 @@ Music is a choice, not a default. Decide whether the video wants any, then what,
 - Listen across every join and to the last word. If you can't hear, say so: a person should.
   A tool that said it worked, a render that finished or a clean level scan doesn't prove a
   join sounds right.
+- A still can't show a picture that has stopped moving. Scan the render for frozen stretches
+  (`ffmpeg -i out.mp4 -vf freezedetect=n=-60dB:d=0.5 -an -f null -` lists each one's start and
+  length) and look at any that should be moving.
+- When a render takes minutes, render the few seconds a change touches and look at those
+  before rendering the whole.
 - Check captions against the words and B-roll against what's being said at that moment.
 - Measure the loudness of what you'll deliver.
 - Reread your read: does the edit make the point, for those viewers, there?
@@ -213,8 +246,10 @@ Music is a choice, not a default. Decide whether the video wants any, then what,
 
 ### 9. Learning from notes
 
-When someone corrects an edit, fix it, then ask whether the note is a rule for next time. If it
-is, write it down with the note it came from, when it applies and how to check it. A show's or
+When someone corrects an edit, change what the note asks for and nothing else, then ask whether
+the note is a rule for next time. If it is, write it down with the note it came from, when it
+applies and how to check it. An idea of your own (another sound, a new graphic) is offered in
+words, not slipped into the revision. A show's or
 channel's own editing notes win over this guide. When the editor you're in keeps the person's own
 keeps and cuts as learned habits, read them first and follow them over this guide's defaults.
 
