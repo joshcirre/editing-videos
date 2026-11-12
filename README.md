@@ -10,6 +10,8 @@ drives the AI editor in [JCSS](https://jcss.tv).
 - [MOTION.md](MOTION.md): motion graphics written as ordinary web pages (any CSS, SVG, canvas,
   WebGL or library) and drawn to transparent frames by `scripts/page-frames.mjs`, which needs
   only Node 22+ and Chrome.
+- [JCSS.md](JCSS.md): editing with JCSS's `jcss` CLI, from nothing but the video. Read only
+  when JCSS is the editor.
 
 ## Install
 
@@ -47,5 +49,5 @@ for the idea of a page clock the renderer runs. The scripts here are written fro
 
 ## License
 
-MIT. This folder is published from the JCSS repository, where JCSS builds the same guide into its
-own agents; change it there.
+MIT. This folder is published from the JCSS repository with each JCSS release, so it matches the
+JCSS people can download. JCSS builds the same guide into its own agents; change it there.
