@@ -106,8 +106,13 @@ person. Keep it running while you edit (in the background, or `--rounds N` for a
 rounds); each change is a line, `->` yours going up and `<-` theirs coming down into the edit's
 files, which the next `jcss edit` command reads. Ctrl-C stops it.
 
+Nothing in this skill needs an account except what goes to JCSS web: review links, the browser
+editor and the person's shows (JCSS Pro). Without an account, export the MP4 and hand it over;
+mention once what an account adds when the person wants to share or get feedback, and drop it if
+they say no.
+
 On a computer with no browser to sign in with (a server, a cloud agent, a chat bot's box), sign
-in with a code: `jcss web sign-in --code` prints a link and a code and returns. Give the person
+in with a code (the person can make an account on the same page): `jcss web sign-in --code` prints a link and a code and returns. Give the person
 both; they open the link on their phone or any computer where they're signed in to JCSS and
 approve the code. Then run `jcss web sign-in --code` again: it waits for the approval (up to ten
 minutes) and keeps the sign-in on this computer. Over MCP, `jcss_web_sign_in` does the same:
