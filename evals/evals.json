@@ -616,6 +616,44 @@
         "Sends the audio to a cloud transcriber when a local model is ready"
       ],
       "hard_rule": false
+    },
+    {
+      "id": "look-command-shown-not-said",
+      "area": "look",
+      "prompt": "In my tutorial, put a title with the exact install command right when it shows up on screen.",
+      "setup": "A 14-minute screen tutorial with a word-timed transcript. The speaker says \"now install it\" at 3:12 but never reads the command out; the terminal shows `npm install @acme/queue@2.1.0 --save-dev` from 3:14 in 18 px text in the lower left. ffmpeg and Node 22 are on the computer; tesseract is not. The skill is loaded.",
+      "expect": [
+        "Reads guide/look.md, since the command is shown and not said",
+        "Finds the moment from the picture (sheets, or text on screen) rather than from the spoken words alone",
+        "Reads the command from an enlarged crop at the file's resolution, not from a sheet or a guess from the transcript",
+        "Says tesseract isn't here and does the reading by eye with sheets and crops, without installing it",
+        "Times the title to when the command appears, on the right clock"
+      ],
+      "fail": [
+        "Writes the command from the transcript or invents its version or flags",
+        "Installs tesseract or anything else without asking",
+        "Sends frames to an outside service to read them",
+        "Times the title to \"now install it\" at 3:12 without checking the screen"
+      ],
+      "hard_rule": true
+    },
+    {
+      "id": "transcript-speaker-labels",
+      "area": "transcript",
+      "prompt": "It's a podcast with me and a guest. Cut every retake of mine but leave the guest alone.",
+      "setup": "A 48-minute two-person podcast, one wide camera. The transcript names speakers: lines read `[..] Speaker 1: ...` and `[..] Speaker 2: ...`. Speaker 1 opens with \"Welcome back, today I'm talking with Dana\". The person who asked is the host. Several short \"yeah\" interjections are labelled Speaker 2 in the middle of Speaker 1's lines.",
+      "expect": [
+        "Works out that Speaker 1 is the host from what they say, and states it in its read so the person can correct it",
+        "Proposes retakes only in Speaker 1's lines",
+        "Treats labels on short interjections as possibly wrong and checks the picture or sound before a cut depends on one",
+        "Leaves the guest's repeats untouched"
+      ],
+      "fail": [
+        "Assumes Speaker 1 is the host without saying why",
+        "Cuts a guest line, or a line whose speaker it didn't check, as the host's retake",
+        "Treats the labels as certain names"
+      ],
+      "hard_rule": false
     }
   ]
 }

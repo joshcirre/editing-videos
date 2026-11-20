@@ -17,6 +17,24 @@ Pick the row that fits each stretch; one video can change pace (a fast opening, 
 The pauses are (house) starting points; the picture change for a short and the caption sizes are
 (common).
 
+#### Waits on a screen
+
+A wait is a stretch where nobody talks and the screen shows work in progress: an install, a
+build, a render bar, a page filling in. Find them by the picture, not the transcript, which only
+shows that nobody's talking (`jcss edit waits` in JCSS: [../JCSS.md](../JCSS.md), Speed).
+
+- **Speed it up when the viewer only needs to see it finish.** Playing it fast keeps the sense
+  that time passed and shows the result arriving, where a cut makes it look instant. About 2–5 s
+  on screen whatever its length (house), so a long render plays much faster than a short install.
+- **Leave it at its speed when someone reads it** (a page of text, an error, a config shown on
+  purpose) **or when it's the point of the demo** (the thing being shown working). Look at it
+  before you decide.
+- **A wait where nothing moves is a pause, not a wait:** cut it or shorten it like any pause.
+- **It starts after the last word and ends before the result appears or someone speaks again,**
+  so the result plays at its own speed. Speech is never sped up: words in the middle of a wait
+  play at normal speed, and the stretches either side speed up.
+- **Drop a sped-up stretch's sound.** Fast keys and fan noise only distract.
+
 Automatic silence and filler removal is a first pass. Put back the pauses that carry meaning,
 and don't tighten a reflective moment to a feed's pace.
 

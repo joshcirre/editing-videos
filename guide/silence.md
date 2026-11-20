@@ -27,6 +27,18 @@ and the person's profile ([../TASTE.md](../TASTE.md)).
 
 #### Word times and real pauses
 
+In JCSS, use `jcss edit pause <id> --at <edit seconds> --to 0.35` (MCP
+`jcss_edit_pause {id, at, to}`) instead of calculating trim deltas from word times. It measures
+the sound, keeps the word tails, and reports `before` → `after`, `max`, `recorded`, `has_cut`
+and any `stopped` limit. `--recorded` restores the silence following the outgoing word in its
+recording. Across one hard cut it trims both sides; inside one piece it cuts the middle of the
+silence and cannot lengthen it. Multiple cuts and non-cut transitions are refused.
+
+`jcss edit pause <id> --from 10 --until 60 --to 0.3 --over 1` sets every measured pause over
+one second in that range, right-to-left, as one undoable version. Omit `--over` for all pauses;
+ones already within one frame of target are skipped. `--dry-run --json` shows the measured
+results without saving. Missing sound levels are an error, not permission to guess.
+
 - **Words from a transcriber touch each other and end early.** Most give every word an end equal
   to the next word's start, also across a real pause, and put a word's end 40–100 ms (common)
   before its last sound dies. A cut placed on those times clips a consonant or lands inside the

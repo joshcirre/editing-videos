@@ -45,6 +45,7 @@ what's set up").
 | choosing the opening, a cold open, chapters or the ending | [guide/shape.md](guide/shape.md) |
 | making or reading a transcript, or timing anything from words | [guide/transcript.md](guide/transcript.md) |
 | finding where a recording is really silent, and which pauses are dead air | [guide/silence.md](guide/silence.md) |
+| seeing what's on screen: skimming, reading small text, finding text that's shown | [guide/look.md](guide/look.md) |
 | using a detector or an automatic pass to propose cuts | [guide/first-pass.md](guide/first-pass.md) |
 | cutting: retakes, fillers, joins, jump cuts, cameras, zooms | [guide/cut.md](guide/cut.md) |
 | adding B-roll, screens, highlights or other visuals | [guide/broll.md](guide/broll.md) |
@@ -63,8 +64,8 @@ what's set up").
 ## Scripts
 
 In `scripts/`, each with `--help`. They need Node 22 or later and install nothing; all but
-`taste.mjs` and `retime-words.mjs` need ffmpeg, and `page-frames.mjs` needs Chrome. Each prints
-one line of JSON, and the checks exit 1 when they find a problem. When one can't run here, do
+`taste.mjs` and `retime-words.mjs` need ffmpeg, `look.mjs text` needs tesseract, and
+`page-frames.mjs` needs Chrome. Each prints one line of JSON, and the checks exit 1 when they find a problem. When one can't run here, do
 its job by hand from the guide file and say so. Numbers in the guide are tagged by where they
 come from; [guide/rules.md](guide/rules.md) has the key.
 
@@ -73,6 +74,7 @@ come from; [guide/rules.md](guide/rules.md) has the key.
 | `silences.mjs` | finds silence with a threshold taken from the file; snaps word edges to it | [silence.md](guide/silence.md) |
 | `cut-candidates.mjs` | proposes stutters, retakes, false starts, fillers and pauses; never decides | [first-pass.md](guide/first-pass.md) |
 | `retime-words.mjs` | moves word times onto the clock of a cut, and back | [transcript.md](guide/transcript.md) |
+| `look.mjs` | contact sheets, enlarged crops, and the text on screen, searchable | [look.md](guide/look.md) |
 | `cover.mjs` | measures how much of a text box the person covers | [behind.md](guide/behind.md) |
 | `check.mjs` | scans a render: stray frames, black, frozen, loudness, draft against final | [check.md](guide/check.md) |
 | `measure-style.mjs` | measures a finished video's shots, pauses, joins and loudness | [study.md](guide/study.md) |

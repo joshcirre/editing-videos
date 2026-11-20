@@ -8,7 +8,10 @@ Everything here is a default that the person's profile or words override, except
   follows an action.
 - **Cut between phrases** (what's said in one breath), in silence, never inside a word (hard rule).
   Leave a breath before the next word: about 0.1–0.2 s (house) on the incoming side, a little
-  more after the end of a sentence. How long the whole pause stays is in [pace.md](pace.md).
+  more after the end of a sentence. Hold after the outgoing word's last sound, not its
+  transcribed end: about 0.4 s after a sentence and 0.2 s inside one (house). JCSS's show
+  setting `sentence_pause` overrides the sentence hold. Shorten it before the next word,
+  never into one being cut. How long the whole pause stays is in [pace.md](pace.md).
   A profile can differ: measured on one creator's own cuts of two tutorials, about
   0.35 s was kept after the outgoing word and 0.08 s before the incoming one, and pieces were
   rarely under 5 s and never under 3 s (measured).

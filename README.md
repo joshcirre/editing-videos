@@ -26,7 +26,8 @@ drives the AI editor in [JCSS](https://jcss.tv).
 - `TASTE.md` is the taste profile (`editing.md`): how a person's own taste, said or measured,
   beats the guide's defaults, for one show or for all their videos.
 - `scripts/` are small Node programs with no dependencies (most need ffmpeg): finding silence,
-  proposing cuts, retiming a transcript, measuring a finished video, checking a render.
+  proposing cuts, retiming a transcript, looking at the picture, measuring a finished video,
+  checking a render.
 - `evals/` holds cases for checking a change to the guide: see [evals/README.md](evals/README.md).
   No hard-rule case may regress.
 
@@ -35,12 +36,15 @@ already uses it. It never installs either unasked.
 
 ## Install
 
-With [JCSS](https://jcss.tv) installed, it carries this skill and keeps it up to date, for
-Claude Code and Codex in every folder:
+The [JCSS CLI](https://jcss.tv/agents) carries this skill and keeps it up to date, for Claude
+Code and Codex in every folder (or `~/.agents/skills` when neither is set up):
 
 ```sh
-/Applications/JCSS.app/Contents/Helpers/jcss skill install
+jcss skill install
 ```
+
+If `jcss` isn't on PATH, use its full path (see [JCSS.md](JCSS.md)). For another agent, pass
+`--to <skills folder>`.
 
 Without JCSS, Claude Code:
 
@@ -76,8 +80,9 @@ herk-edit-kit again, [Remotion's skills](https://github.com/remotion-dev/skills)
 [video-editing-skill](https://github.com/maxazure/video-editing-skill),
 [b-roll-skills](https://github.com/iart-ai/b-roll-skills) (MIT),
 [claude-code-video-toolkit](https://github.com/digitalsamba/claude-code-video-toolkit) (MIT) and
-[OpenMontage](https://github.com/openmontageinc/openmontage). The scripts here are written from
-scratch.
+[OpenMontage](https://github.com/openmontageinc/openmontage). For looking at the picture
+(`look.mjs`): [Claude Eyes](https://github.com/moritzkremb/claude-eyes) (MIT). The scripts here
+are written from scratch.
 
 ## License
 
