@@ -30,7 +30,8 @@ Everything here is a default that the person's profile or words override, except
 - **Sound leads and lingers**: let the next voice start under the end of a shot (a J-cut), or a
   voice carry over into the next shot (an L-cut), so cuts between people and places feel natural.
 - **Several cameras**: the picture follows whoever is talking, holds reactions that matter, and
-  never cuts to the same framing mid-sentence.
+  never cuts to the same framing mid-sentence. Don't cut to someone for an interjection: under
+  about 1.5 s or four words (house), stay on the speaker, or on a shot with both.
 - **Zooms and punch-ins** need a reason (emphasis, a detail to see). Never across a cut, and not
   on every line. A slow drift goes back to its start only on a cut; a reset in the middle of a
   shot is a bump.

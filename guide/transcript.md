@@ -19,17 +19,21 @@ Everything here is a default that the person's profile or words override, except
 
 #### Who is talking
 
-- **With more than one voice, use a transcript that says who talks**, when what's set up can
-  (some transcribers tell voices apart; JCSS does with ElevenLabs). A line then reads
-  `[12.30–15.84] Speaker 2: the words`, and a new line starts wherever the voice changes. It
-  settles whose retake a repeat is, whom to cut to in a conversation, and whose name a lower
-  third shows.
-- **The labels are voices, not names.** Work out who `Speaker 1` is from what they say (the
-  host introduces the guest) and the brief, and say it in your read so the person can correct
-  it. The numbers only mean the order they first talk.
+- **With more than one voice, use a transcript that says who talks**, when what's set up can.
+  Some transcribers tell voices apart (JCSS's does with ElevenLabs), and a recording with a
+  sound file per person can be labelled by which mic is talking (JCSS does this by itself).
+  A line then reads `[12.30–15.84] Sam: the words`, and a new line starts wherever the voice
+  changes. It settles whose retake a repeat is, whom to cut to in a conversation, and whose
+  name a lower third shows.
+- **A label from a mic is that file's name. A label from a transcriber is a voice, not a
+  name.** Work out who `Speaker 1` is from what they say (the host introduces the guest) and
+  the brief, and say it in your read so the person can correct it. The numbers only mean the
+  order they first talk.
 - **They are guesses, like the words.** Short interjections ("yeah", "right"), two people
-  talking at once and two similar voices get the wrong label most often. Before a cut or a
-  camera choice depends on one, check the picture: whose mouth moves.
+  talking at once and two similar voices get the wrong label most often. A label from a mic
+  is wrong wherever that file is out of step with the others, so check the offsets first
+  ([sync.md](sync.md)). Before a cut or a camera choice depends on a label, check the
+  picture: whose mouth moves.
 
 #### One clock per stage
 

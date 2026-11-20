@@ -43,6 +43,7 @@ what's set up").
 | starting a full edit, or working out what the video is | [guide/read.md](guide/read.md) |
 | setting pauses, how often the picture changes, caption size | [guide/pace.md](guide/pace.md) |
 | choosing the opening, a cold open, chapters or the ending | [guide/shape.md](guide/shape.md) |
+| given several files of the same moment (cameras, mics, a screen) | [guide/sync.md](guide/sync.md) |
 | making or reading a transcript, or timing anything from words | [guide/transcript.md](guide/transcript.md) |
 | finding where a recording is really silent, and which pauses are dead air | [guide/silence.md](guide/silence.md) |
 | seeing what's on screen: skimming, reading small text, finding text that's shown | [guide/look.md](guide/look.md) |

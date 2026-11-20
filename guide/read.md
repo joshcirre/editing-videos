@@ -14,7 +14,9 @@ well and leave the rest alone. Use this guide for *how*; don't re-edit what nobo
 ### Work with what's set up
 
 Use only the tools and services that are already working where you are: the editor, what's installed
-on this computer, and accounts or API keys that are already set up. Never sign up for anything, ask
+on this computer, and accounts or API keys that are already set up. Before a step that is billed
+by length runs (transcription in the cloud, generated sound or picture), say how many minutes are
+going and to whom, and wait for a yes. Never sign up for anything, ask
 for or paste a key, install something paid, or send the person's footage to an outside service just
 to follow this guide (hard rule). When a step would need a service that isn't set up (stock footage
 or music, generated images, video or music, cloud transcription), skip it, do the best edit with
@@ -55,7 +57,10 @@ and move everything after it by the same amount. Then prove it: the frame count 
 worked out, and their voice lines up with their cut before and after each change.
 
 Look at the files too. Know who and what is in each clip before you use it: a folder that was
-handed over isn't all the same person or the same event. Compare where each file's picture and
+handed over isn't all the same person or the same event. For several files of one conversation,
+write one line per file (whose camera, whose mic, which screen) and ask when the files don't
+say: the answer becomes the speakers' names, and a wrong one puts the wrong name on every
+line. Then line them up ([sync.md](sync.md)). Compare where each file's picture and
 sound start (`ffprobe -v error -show_entries stream=codec_type,start_time -of csv=p=0 clip.mp4`
 prints both); a picture that starts seconds after its sound turns up in the edit as a frozen or
 late shot.

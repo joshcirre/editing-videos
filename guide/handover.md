@@ -30,8 +30,9 @@ it has nothing in it, except **Not checked**, which is always there.
   times most worth their attention, most risky first, each with what to listen or look for.
 - **Warnings left standing**: every check that warned, and the reason you left it. A warning
   can stand when you have a reason; it can't go unsaid.
-- **Still open**: questions for them, and what you skipped for lack of a tool or service, with
-  what setting it up would add ([read.md](read.md), "Work with what's set up").
+- **Still open**: questions for them, what you skipped for lack of a tool or service, with
+  what setting it up would add ([read.md](read.md), "Work with what's set up"), and any
+  comment that asked for something other than a change to the video ([notes.md](notes.md)).
 
 #### Say how, not how sure
 

@@ -51,6 +51,13 @@ viewer gets, and stray frames, black gaps and clipped words only exist in the fi
   final with the approved draft, frame by frame at the draft's size, and look at every
   place they differ. The frame count and the sound should be the same.
 
+#### A short piece first
+
+For a long video made from several files, make two or three minutes (house) first, from a
+stretch where people take turns, and have the person look at the sync, the framing and the
+sound before you make the rest. A wrong offset, crop or level is the same in every minute, and
+an hour is a long time to find that out.
+
 #### Trust a check only after it has failed
 
 - **Try each check on something known to trip it.** A scan that has never found anything may
