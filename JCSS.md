@@ -147,7 +147,8 @@ titles and chapters are already in the edit (`jcss edit from-recording`).
 
 `jcss edit job <files or links…> --brief "…" -p <show>` transcribes the videos and makes a first
 pass unattended. By default it publishes a draft on a review link; use `--no-review` if the
-person didn't ask for a link. Publishing needs a JCSS Pro account signed in to JCSS web; reviewers
+person didn't ask for a link. Publishing needs a JCSS account signed in to JCSS web: a free one
+makes one link a week (new versions on it for a week, up to 2 GB each), Pro as many as it likes; reviewers
 with the link don't need an account. For a headless worker, sign in with a code (above), or have
 the account owner run `jcss web token "worker"` on a signed-in computer and pass the token
 securely as `JCSS_WEB_TOKEN` in the worker's environment. Check with `jcss web status` on the
@@ -243,7 +244,7 @@ Highlights are yours to pick. The rules highlight numbers, names and the word a 
 (`--emphasis auto`, the default; `numbers`; `off`), drawn in the style's `emphasis` look. Rules
 can't tell which line matters, so after the cut is settled:
 
-1. `jcss edit captions <id> --show` (`--vertical` for the vertical's) prints every caption with
+1. `jcss edit captions <id> --list` (`--vertical` for the vertical's) prints every caption with
    each word's number and the highlighted words in `[brackets]` with why.
 2. Read it and decide, per [guide/text.md](guide/text.md): `--pick 16="the size of the hoard"`
    highlights word 16, `--drop 14` removes a rule's pick that isn't the point. Repeat both as
@@ -339,6 +340,18 @@ the captions' font, a size, a pace), offer once, at the end of the work, to tell
 area `font.captions`, shipped `system sans-serif`, wanted `Anton`. Show its preview word for word and send
 it (`send: true`) only on their yes; after a no, don't offer again. The JCSS team sees these
 added up across everyone (decision 0277).
+
+### When JCSS can't do what the person wants
+
+Do the work in JCSS: its edits are versions the person can undo, review and finish in the app,
+and what you do with ffmpeg or an image library is none of that. Check [What JCSS doesn't do
+yet](#what-jcss-doesnt-do-yet), `jcss guide` and `jcss commands` first. When JCSS really can't
+(letter spacing on captions, cropping to a face), tell the person, then do it another way if they
+want. At the end of the work, offer once to tell JCSS about each gap:
+`jcss_request {kind: "gap", title, gap: {area, workaround, times}}`, such as area
+`caption.letter-spacing`, workaround `ffmpeg and libass`. Show the preview word for word and send
+it only on their yes; after a no, don't offer again. The JCSS team builds what most people hit
+first (decision 0282).
 
 ## What JCSS doesn't do yet
 
