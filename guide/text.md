@@ -7,7 +7,13 @@ Everything here is a default that the person's profile or words override, except
 - **Captions** are exactly what was said (with names spelled right), timed to the words (hard rule),
   one group on screen at a time, split where a phrase ends. Size the groups by the pace
   ([pace.md](pace.md)); subtitles are at most 42 characters a line, two lines (common), and at
-  least 0.7 s on screen (house).
+  least 0.7 s on screen (house). Lines in a group are about even, break after punctuation, never
+  end on a small word (`the`, `of`), and never split an amount (`$5 million`, `40 percent`).
+- **Highlight the words that matter**, at most one a caption group, two on one of five words or
+  more (house): numbers first (prices, percentages, years, counts), then names, then the word the
+  line turns on (`never`, `free`, `broke`), then the topic the first time it comes up. Never a
+  filler, and not every group needs one. A name said again rarely does. Rules find numbers and
+  names; choosing which line's point to stress is the editor's call.
 - **Never cover** a mouth, a face that's talking, or what the viewer needs to read on a screen
   (hard rule). Make them readable over anything: a box or a strong shadow, checked against what's
   behind. Over footage that is the point (a montage, a demo), text goes to a side or a corner so the

@@ -9,9 +9,13 @@ itself. These steps start from nothing but the video:
    `/Applications/JCSS.app/Contents/Helpers/jcss` on a Mac,
    `%LOCALAPPDATA%\Programs\JCSS\cli\jcss.exe` on Windows; when JCSS installed this skill,
    "On this computer" at the end of [SKILL.md](SKILL.md) has the path. Use that path wherever
-   these steps say `jcss`. When it isn't installed, tell the person and ask before installing
-   anything. [jcss.tv/agents](https://jcss.tv/agents) has the CLI-only setup for Linux x64,
-   Apple silicon Macs and Windows x64. Local editing doesn't need a JCSS web account.
+   these steps say `jcss`. When it isn't installed, tell the person this skill edits with JCSS
+   and ask before installing it; don't do its steps with ffmpeg instead.
+   [jcss.tv/agents](https://jcss.tv/agents) has the CLI-only setup for Linux x64, Apple silicon
+   Macs and Windows x64. Local editing doesn't need a JCSS web account.
+   The first time `jcss` runs it tells you what it sends JCSS (one anonymous ping a day, no
+   videos or words) and asks you to tell the person: do, and run `jcss usage off` if they'd
+   rather send nothing. When a result says a newer `jcss` is out, offer `jcss update`.
    On Linux there is no desktop app for `jcss edit open`, and the CLI needs ffmpeg, a Vulkan
    driver (a GPU's, or Mesa's lavapipe) and, for page clips, Chrome or Chromium.
 2. Open the video as an edit, in a new folder for this video (JCSS calls the folder a show):
@@ -228,6 +232,31 @@ takes its group unless the command has `"alone": true`.
   "revenue"}` (the word's time in the edit, from `jcss transcript <id> --find revenue`), or
   `"cut_at": 40.0` for the cut within a second of there. Without either it lets go.
 
+### Captions
+
+`jcss edit captions <id> on --style tiktok --vertical-style spotlight` turns captions on with any
+caption style the show has, the same ones live captions use (`jcss_caption_styles` lists them;
+a style is a JSON file the person or you can copy and change, `captions/style/<id>/<setting>/<value>`).
+JCSS breaks lines evenly and keeps an amount (`$5 million`) on one line by itself.
+
+Highlights are yours to pick. The rules highlight numbers, names and the word a line turns on
+(`--emphasis auto`, the default; `numbers`; `off`), drawn in the style's `emphasis` look. Rules
+can't tell which line matters, so after the cut is settled:
+
+1. `jcss edit captions <id> --show` (`--vertical` for the vertical's) prints every caption with
+   each word's number and the highlighted words in `[brackets]` with why.
+2. Read it and decide, per [guide/text.md](guide/text.md): `--pick 16="the size of the hoard"`
+   highlights word 16, `--drop 14` removes a rule's pick that isn't the point. Repeat both as
+   needed; `--clear-picks` starts over. MCP: `jcss_edit_captions {id, show: true}`, then
+   `{id, pick: ["16=the size of the hoard"], drop: ["14"]}`.
+3. `--show` again, then look at a still of a highlighted caption.
+4. `jcss edit check <id>` lists captions that read badly: up under 0.7 s, too many highlights,
+   more lines than the style holds, or cut off at their box. Drop picks, pick a style that fits,
+   or cut so the caption gets more time, then check again.
+
+Picks stay with their word through recuts. A highlighted caption stays up a little longer after
+its last word.
+
 ### Text
 
 `jcss edit text <id> <from> <to> --text "ambitious" --size 260 --weight 800 --rect
@@ -301,6 +330,15 @@ The answer waits as a suggestion: asking again or `jcss edit run` changes that s
 or discard before exporting. Over MCP: `jcss_edit_ask {id, request, from, to, marks, keep}` and
 `jcss_edit_keep {id, discard}`. Use it when the person wants their agent placing something while
 looking at it; a change you already know is one `jcss edit run`.
+
+### When the person keeps changing what JCSS picked
+
+If the person changes the same default JCSS ships twice or more (the full-screen words' font,
+the captions' font, a size, a pace), offer once, at the end of the work, to tell JCSS:
+`jcss_request {kind: "default", title, default: {area, shipped, wanted, times}}`, such as
+area `font.captions`, shipped `system sans-serif`, wanted `Anton`. Show its preview word for word and send
+it (`send: true`) only on their yes; after a no, don't offer again. The JCSS team sees these
+added up across everyone (decision 0277).
 
 ## What JCSS doesn't do yet
 
