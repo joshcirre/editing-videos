@@ -44,21 +44,24 @@ is installed unasked, and a tool that isn't there is never a reason to stop.
   two typefaces, the text sizes, three easings and the durations (house). Take them from the
   person's brand, or from the titles the video already has. The rest of the page uses only those, so
   every graphic in the video matches and one change restyles them all.
+- **No look yet? Ask for one to emulate** before the first cut ([guide/read.md](guide/read.md)):
+  a website or brand guidelines to match. Take the tokens from what they point to.
 - **Real things only.** Names, numbers, logos and screenshots come from the transcript or from
   files the person handed over. When one is missing, ask; never draw a look-alike or invent a
   figure.
 
 ### 2. How it should move
 
-- **Ease by what the thing is doing.** Arriving slows into place: `cubic-bezier(0.16, 1, 0.3, 1)`.
-  Leaving speeds away: `cubic-bezier(0.7, 0, 0.84, 0)`. Moving across the frame eases both ways:
-  `cubic-bezier(0.76, 0, 0.24, 1)`. The three curves are (house). One curve at one length on
-  everything is what makes a graphic look generated.
+- **Ease by what the thing is doing.** Arriving slows into place (*arrive*):
+  `cubic-bezier(0.16, 1, 0.3, 1)`. Leaving speeds away (*leave*): `cubic-bezier(0.7, 0, 0.84, 0)`.
+  Moving across the frame eases both ways (*across*): `cubic-bezier(0.76, 0, 0.24, 1)`. The
+  three curves are (house). One curve at one length on everything is what makes a graphic look
+  generated.
 - **Lengths**: a move takes 0.3–0.6 s. An exit is about half as long as the entrance. Items in a
   group follow each other by 60–120 ms (all house).
 - **Once it lands, it stays still.** No floating, pulsing or breathing while people read. Not
   everything fades and slides up: pick the entrance from the thing (a bar grows from its base, a
-  line draws along its path, a card comes from the edge it sits against).
+  line draws along its path, a card comes from the edge it sits against): "Moves" below.
 - **Nothing starts from nothing**: scale from about 0.95 (house) with opacity, not from 0.
 - **One piece of text per beat.** A big number or a headline stands alone: no small label above
   it, no caption line under it. That stack is a web page's hero section, and on video it reads
@@ -69,6 +72,72 @@ is installed unasked, and a tool that isn't there is never a reason to stop.
   a title 4–9% of the height (house). Text stays inside the middle 80% of the frame, everything
   else inside 90% (common). The footage behind is unknown, so text sits on its own box or a
   strong shadow. For a vertical video, also look at a still shrunk to 360 px (house) wide.
+
+### Moves
+
+Twelve named moves, each with what it's for and how to build it. Name the move in the beats
+table ("0:12.3 — bar chart, Grow, 3 bars"), so the plan says how each thing moves before any
+code is written. Curves are section 2's: *arrive*, *leave* and *across*. Distances are given at
+1080p; scale them with the frame. A move that covers a distance or a value (Grow, Draw on,
+Count) may run past section 2's 0.6 s. Every value here is house unless it says otherwise.
+
+- **Rise**: text or a card comes up a short way as it fades in. Translate 2–3% of the frame
+  height (20–30 px), opacity 0 to 1, scale from 0.95, *arrive*, 0.4–0.5 s. It's the default,
+  which is why it's never the only move in a video: use it for the one thing that has no better
+  entrance.
+- **Grow**: a bar, a progress line or a column grows from its base to its value. `scaleY` (or
+  `scaleX`) from 0 with `transform-origin` at the base, *arrive*, 0.5–0.8 s, bars 80 ms apart.
+  The exception to "nothing starts from nothing": the value really starts at zero.
+- **Draw on**: a line, an arrow, an underline, a circle around a word or an outline draws along
+  its path. SVG `stroke-dasharray` set to `getTotalLength()`, then `stroke-dashoffset` from that
+  length to 0, *across*, 0.4–0.8 s by length. What it points to is already there, or arrives as
+  the line reaches it.
+- **Slide in**: a lower third, a panel or a sidebar comes from the edge it sits against, the
+  whole of its own width, *arrive*, 0.4–0.6 s. Its text follows 80–120 ms later with a Rise of
+  half the distance, so the box lands first and the words land on it.
+- **Wipe**: a headline is uncovered by a window that opens over it; the letters don't move.
+  `clip-path: inset(0 100% 0 0)` to `inset(0 0 0 0)`, *across*, 0.5–0.7 s, in the reading
+  direction. For a heavier version, move the text up 100% of its own line inside a parent with
+  `overflow: hidden` (a line reveal), lines 80 ms apart.
+- **Cascade**: a sentence arrives word by word with the voice. Each word a Rise of 10–15 px over
+  0.25–0.3 s, *arrive*. Time each word to the transcript's word time when the sentence is
+  spoken; 60–100 ms apart when it isn't. Never letter by letter on words someone has to read.
+- **Count**: a number counts up to its value. `font-variant-numeric: tabular-nums` and a fixed
+  width so the layout doesn't shake, an ease-out on the value (*arrive*), 0.8–1.5 s, landing on
+  the exact figure from the transcript with its real formatting (`$4.2M`, not `4200000`). The
+  number lands, then holds for its reading time.
+- **Pop**: a small thing (an icon, a badge, a dot on a map, a checkmark) arrives with a little
+  overshoot. Scale 0.6 to 1 with `cubic-bezier(0.34, 1.56, 0.64, 1)`, 0.2–0.3 s. Only on things
+  smaller than about 10% of the frame and never on text: overshoot on a headline reads as a
+  toy. The one curve allowed to pass its target.
+- **Push**: one scene of a graphic replaces another, both moving the same way. The old content
+  leaves and the new one arrives from the opposite edge in the same motion, *across*, 0.5–0.7 s,
+  the direction matching what changed (forward in a list goes left, deeper into a topic goes
+  up). For a whole graphic that changes, not for one element.
+- **Hand-off**: one element becomes the next beat's element (a dot grows into a card, a
+  highlighted row lifts out to become the title of the next view). Measure where it starts and
+  where it ends, then animate `transform` from one to the other (FLIP), *across*, 0.5–0.7 s,
+  while the rest of the old beat leaves and the rest of the new one arrives 100 ms after it
+  lands. The strongest way to say "this one, more closely"; one per graphic at most.
+- **Spotlight**: one item among many is singled out while the others step back. The others go
+  to 35–45% opacity (a blur of 2–4 px when they're images), the chosen one stays or scales to
+  1.04, *across*, 0.3 s. Time it to the word that names it. Move the spotlight; don't stack a
+  new highlight on the old one.
+- **Cut on**: no motion at all. The thing is simply there on the frame it's needed. Right for a
+  hard beat in the music, a fast montage, a punchline, and the second and later items of a
+  rhythm the viewer already knows. A graphic made only of moves feels slow; a cut on now and
+  then is what keeps the moves feeling deliberate.
+
+Putting them together:
+
+- **Two or three kinds of entrance in one graphic**, one move per beat. Each element gets the
+  move its shape asks for, and the same kind of element gets the same move every time it
+  appears in the video.
+- **Exits mirror entrances**: the same move reversed, on *leave*, about half as long. A Push
+  and a Hand-off are their own exits. Several things leaving go together, or 40 ms apart at
+  most; a staggered exit makes the viewer wait for the end of something they've stopped reading.
+- **One thing moves at a time where the eye has to be.** A Cascade under a Count makes the
+  viewer choose; the second move waits until the first has landed.
 
 ### 3. Write the page
 

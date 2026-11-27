@@ -33,6 +33,7 @@ Nothing broken on screen or in the sound:
 - Never fade the last word. [shape.md](shape.md)
 - A highlight is gone, fade included, before its shot changes. [broll.md](broll.md)
 - Never cover a mouth, a talking face, or what the viewer needs to read. [text.md](text.md)
+- A camera in a split tile is cropped so the person is centered in it. [broll.md](broll.md)
 - A shade or gradient under text never stays after its words. [text.md](text.md)
 - Text behind a person needs their cutout on every frame it shows. [text.md](text.md)
 - Fade every hard audio cut, so joins don't click. [sound.md](sound.md)

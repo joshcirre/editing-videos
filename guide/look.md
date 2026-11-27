@@ -13,6 +13,12 @@ override, except what's marked `(hard rule)`: see [rules.md](rules.md).
   stretch at once: where the shots and screens change, which part is worth a closer look. For
   that part, make a sheet of just it; a few sheets get you to the second without watching
   everything. A sheet samples: anything shorter than the gap between its frames can be missing.
+- **Note what you saw, and read notes before looking.** Looking costs more than anything else
+  you read. With JCSS, a file's note (`jcss media notes <file>`, `jcss_media_notes`) says what
+  someone already saw in it; read it first. After looking at a file you'll use, write two or
+  three lines on it (`jcss media note <file> "…"`, `jcss_media_notes {set}`): what happens and
+  where, with times in the file's own seconds, the people, the place, the light, how steady, the
+  best and weakest moments. Not what's said: that's the transcript.
 - **Read small text from a crop, never from a sheet.** A terminal, code, a URL or a slide's fine
   print is a few pixels tall on a sheet, and a guess at it ends up wrong in a title or a caption.
   Crop that region of one frame at the file's own resolution, enlarged, and read it there.

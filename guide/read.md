@@ -46,8 +46,12 @@ edit from your best read and say what you assumed. The person's words and the br
 over your read.
 
 Two answers are settled before the first cut, by the brief, by asking, or as a guess you state:
-about how long it will be, and whether it's wide or vertical. A first version at the wrong
-length is made again from nothing.
+about how long it will be, and which shapes it goes out in (wide, vertical, square). A first
+version at the wrong length is made again from nothing. A recording made in JCSS answers the
+shapes itself: its show's canvases are what it was made for, so make the wide one and, when the
+show has a vertical, the vertical too. A video made anywhere else is edited in its own shape
+(JCSS gives its edit that canvas); ask whether it should also go out in other shapes, with your
+guess: a talk recorded wide often wants a vertical cut for shorts too.
 
 A third, when the video arrives already cut: is the cut theirs? A cut the person made is final
 (hard rule). Add picture and sound over it; don't move a cut, shorten a pause or change its length.
@@ -55,6 +59,14 @@ Time changes only in a stretch they left whole on purpose (a long silent run tha
 and for what they ask for by name (a cold open, a closing card). Put added time at one of their cuts
 and move everything after it by the same amount. Then prove it: the frame count is the one you
 worked out, and their voice lines up with their cut before and after each change.
+
+A fourth, when the edit will add anything with a look of its own (titles, captions, text,
+graphics, cards): what it should look like. When the profile has no `## Look` lines and the
+video has no titles to match, ask before choosing colours, fonts or a style: "Is there a website
+or brand guidelines I should match?" Take the colours, typefaces and style (how its cards,
+corners and code look) from what they point to, and say where each came from. Use it for this
+video; it goes in the profile only when they say it should ([../TASTE.md](../TASTE.md)). When
+they have nothing to point to, use the editor's own look and say so.
 
 Look at the files too. Know who and what is in each clip before you use it: a folder that was
 handed over isn't all the same person or the same event. For several files of one conversation,

@@ -25,6 +25,12 @@ the point (an emotional beat, a joke, a promise to camera), leave them on screen
 - **Real beats generated.** Generated pictures are never shown as evidence that something
   happened, never stand in for real people, products or places as if real, and never carry
   numbers or results nobody said (hard rule).
+- **Beside the speaker, the speaker is centered** (hard rule). When the frame splits (a graphic or
+  screen on one side, the camera in a tile on the other), crop the camera so the person sits in
+  the middle of their tile, not where they sat in the full frame. A tile narrower than the
+  camera cuts away most of the picture, and a centred crop of an off-centre person leaves them
+  on the edge or out of it. Frame each shot under the tile on its own (a cut in the footage
+  moves the person) and check a still of every one.
 - **Moving beats still.** A photo needs gentle motion (a slow push, about 2–3% (house) over the
   shot, about a fixed center, with no stepping) and stays short; prefer footage that moves on
   its own. Charts, calendars and timelines people need to read stay still.
